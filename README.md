@@ -1,0 +1,2 @@
+[Buffon's needle problem](https://en.wikipedia.org/wiki/Buffon%27s_needle_problem) is one of the earliest problems in probabilistic geometry. The experiment under specific conditions allows us to estimate the value of $\pi$ (pi). 
+For this, set up a striped background of stripe lenght $l$ and some needles of the same length (see example_image.png for ref). Scatter the needles as _randomly_ as possible and count!
