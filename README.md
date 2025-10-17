@@ -20,8 +20,11 @@ For example:
 python buffon_needle_experiment_running.py
 ```
 
-- Running ```buffon_needle_experiment_running.py``` will request an input - image of the experiment. Then, analyses it, counts the number of needles crossing the stripe boundaries, and returns an estimate for $\pi$.
+- Running ```buffon_needle_experiment_running.py``` requests for an input - image of the experiment. Then, analyses it, counts the number of needles crossing the stripe boundaries, and returns an estimate for $\pi$.
     - The program uses functions from ```scikit-image``` package for image analysis.
-- Running ```buffon_plot_running.py``` opens a plot, automatically gets the estimated $\pi$ value and displays it.
+    - **NOTE:** Parameters may need adjustment. 
+- Running ```buffon_plot_running.py``` opens a plot, automatically gets the estimated $\pi$ value, and displays it.
 - The two programs communicate using MQTT protocol (package ```paho-mqtt```).
 - Repeat the experiment as many times as possible to improve your estimate of $\pi$.
+
+

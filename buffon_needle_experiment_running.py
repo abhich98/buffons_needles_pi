@@ -206,7 +206,7 @@ def main():
             pi_value = (2 * len(needles) ) / np.sum(needles_crossed)
 
             logger.log(logging.INFO, f"Needles crossed: {np.sum(needles_crossed)}")
-            logger.log(logging.INFO, f"The value of pi is (DRUM ROLL...): {pi_value}")
+            logger.log(logging.INFO, f"Estimate for pi from this image is (DRUM ROLL...): {pi_value}")
 
             plt.figure()
             plt.imshow(rectified_image)
@@ -227,7 +227,11 @@ def main():
             save_status = input("Do you want to save the result? (y/n): ")
             if save_status == 'y':
                 # Plotting and saving he estimates
-                publish.single("buffon pi", payload=str(pi_value), hostname="test.mosquitto.org")
+                publish.single(
+                    "buffon pi",
+                    payload=f"{len(needles)}_{np.sum(needles_crossed)}_{pi_value}", 
+                    hostname="test.mosquitto.org"
+                )
 
     except KeyboardInterrupt:
         logger.log(logging.ERROR, f"User interrupted.")
